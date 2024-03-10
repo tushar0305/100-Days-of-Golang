@@ -1,13 +1,20 @@
 package main
 
 import (
-	"github.com/tushar0305/100-Days-of-Golang/Day8/naturalsum"
 	"fmt"
 )
+
+func NaturalSum(n int) int {
+    sum := 0
+    for i := 1; i <= n; i++ {
+        sum += i
+    }
+    return sum
+}
 
 func main() {
 	var num int
 	fmt.Print("Enter a positive Integer: ")
 	fmt.Scanln(&num)
-	fmt.Print("Sum: ", naturalsum.NaturalSum(num)) // Corrected function name
+	fmt.Print("Sum: ", NaturalSum(num)) // Corrected function name
 }
